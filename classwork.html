@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 1 спросить имя и спрсить сколько раз вывести */
+        /* 
+        let name = prompt('введите имя');
+        let count = parseInt(prompt('сколько раз вывести?'));
+        for (let i = 1; i <= count; i++) {
+         console.log(name);
+        } */
+
+        /* 2 ввести число 1-100, вывести все чётные до него */
+        /* 
+        let count = prompt('введите число от 1 до 100')
+        for(let i = 1; i <= count; i++){
+            if(i % 2 == 0){
+                console.log(i);
+            }
+        } */
+
+        /* 3 */
+        /* 
+        let first = parseInt(prompt('введите первое число'));
+        let second = parseInt(prompt('введите второе число'));
+        if (first > second) {
+            console.log(first - second);
+        }
+        else if (first == second) {
+            console.log('числа равны');
+        }
+        else {
+            console.log(first + second);
+        } */
+
+        /* 4 */
+        /* 
+        let first = parseInt(prompt('введите первое число'));
+        let second = parseInt(prompt('введите второе число'));
+        let third = parseInt(prompt('введите третье число'));
+        if (first > second && first > third && second > third) {
+            console.log(third, second, first);
+        }
+        else if (first > second && first > third && third > second) {
+            console.log(second, third, first);
+        }
+        else if (second > first && second > third && first > third) {
+            console.log(third, first, second);
+        }
+        else if (second > first && second > third && third > first) {
+            console.log(first, third, second);
+        }
+        else if (third > first && third > second && second > first) {
+            console.log(first, second, third);
+        }
+        else {
+            console.log(second, first, third);
+        } */
+
+        /* 5 */
+       /*  
+       let num = parseInt(prompt('какое число ввести'));
+        let count = prompt('сколько раз сложить');
+        num *= count;
+        console.log(num); */
+
+        /* 6 */
+        /* 
+        let first = parseInt(prompt('введите первое число'));
+        let second = parseInt(prompt('введите второе число'));
+        let third = parseInt(prompt('введите третье число'));
+        if (first > second && first > third) {
+            console.log('большее число');
+            console.log(first);
+        }
+        if (second > first && second > third) {
+            console.log('большее число');
+            console.log(second);
+        }
+        if (third > second && first < third) {
+            console.log('большее число');
+            console.log(third);
+        }
+        if (first < second && first < third) {
+            console.log('меньшее число');
+            console.log(first);
+        }
+        if (second < first && second < third) {
+            console.log('меньшее число');
+            console.log(second);
+        }
+        if (third < second && first > third) {
+            console.log('меньшее число');
+            console.log(third);
+        } */
+
+        /* 7 */
+        /* 
+        let num;
+        do {
+            num = parseInt(prompt('введите число'));
+            if(num > 5){
+                num += num;
+            }
+            console.log(num);
+        } while (num != 0) */
+       
+        /* 8 */
+        /* 
+        num = parseInt(prompt('введите число от 1 до 10'));
+        do {
+            num *= 2;
+            if(num<101){
+        console.log(num);
+            }
+        }
+        while(num < 100); */
+        
+        /* 9 */
+        /*  
+       let max = 0;
+        let a = prompt('сколько раз вы хотите ввести число');
+        for(i = 1; i<=a ; i++) {
+            let b = prompt('введите число');
+            if (b > max){
+                max = b;
+            }
+        }
+        console.log(max); */
+        
+
+    /* 10 */
+    let first= parseInt(prompt('введите первое число'));
+    let second= parseInt(prompt('введите второе число'));
+    if (first > second) {
+        for(let i = second + 1; i < first; i++){
+            console.log(i);
+        }
+    }
+    if (first < second) {
+        for(i = first + 1; i < second; i++){
+            console.log(i);
+        }
+    }
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson2</title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <script>
+    /* Ветвление > < >= <= != == === */
+    let a = 3;
+    let b = 4;
+    if(a == b) {
+        console.log('числа равны!');
+    }
+    else {
+        console.log('числа не равны');
+    }
+
+/* 
+    value1 = +prompt('введите число:') 
+    if (value1 > 0) {
+        console.log('число > 0')
+    }
+    else if (value1 == 0) {
+        console.log('число = 0')
+    }
+    else {
+        console.log('число < 0')
+    }
+  */   
+
+    /* && - и || - или ! - нет */
+    let val2 = 17;
+    if ((val2 >= 5 && val2 <= 10) || (val2 >= 15 && val2 <= 20 )) {
+        console.log('число находится в заданных диапазонах')
+    }
+
+    let val3;
+    if (!val3) {
+        console.log('число не корректно')
+    }
+
+    /* приведение к false */
+    /* 0 NaN undefined null '' */
+
+    /* switch */
+
+    /* 
+    let numderDay = parseInt(prompt('введите номер дня недели:'));
+
+    switch (numderDay) {
+        case 1:
+            console.log('понедельник');
+            break;
+        case 2:
+            console.log('вторник');
+            break;
+        case 3:
+            console.log('среда');
+            break;
+        case 4:
+            console.log('четверг');
+            break;
+        case 5:
+            console.log('пятница');
+            break;
+        case 6:
+            console.log('суббота');
+            break;
+        case 7:
+            console.log('воскресенье');
+            break;
+        default:
+            console.log('не корректное значение')
+    }
+    */
+
+    let test = 3;
+    if (test % 2 == 0) {
+        console.log('четное');
+    }
+    else {
+        console.log('не четное');
+    }
+
+    /* ? - тернарный оператор */
+    let result = (test % 2 == 0) ? 'четное' : 'нечетное';
+    console.log(result);
+
+
+
+    /* ====================================================== */
+    /* ЦИКЛЫ */
+    /* for - классика */
+    for (let i =1; i <= 10; i++) {
+        console.log(i);
+    }
+    for (let i = 0, j = 10; i != j; i++, j--) {
+        console.log(i, j);
+    }
+
+
+    label1: for (let i = 1; i <= 20; i++) {
+        for (let j = 1; j <= 10; j++) {
+            console.log(i, j);
+            break label1;
+            continue label1; /* метки ставятся только на циклы */
+        }
+    }
+
+
+    /* цикл с предусловием */
+    let count = 0;
+    while(count < 10) {
+        console.log(count++);
+        if (count == 5) {
+            break;
+        }
+    }
+
+    /* цикл с постусловием */
+    let count2 = 0;
+    do {
+        console.log(count);
+        count++;
+    } while (count <= 10);
+
+
+
+
+
+    </script>
+</body>
+</html>
