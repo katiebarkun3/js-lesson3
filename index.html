@@ -4,135 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lesson2</title>
-    <style>
-
-
-    </style>
+    <title>lesson 3</title>
 </head>
 <body>
     <script>
-    /* Ветвление > < >= <= != == === */
-    let a = 3;
-    let b = 4;
-    if(a == b) {
-        console.log('числа равны!');
-    }
-    else {
-        console.log('числа не равны');
-    }
+        /* объявление массива */
+        let arr1 = [1, '2', true, 4, 5];
+        const arr2 = new Array(5);
 
-/* 
-    value1 = +prompt('введите число:') 
-    if (value1 > 0) {
-        console.log('число > 0')
-    }
-    else if (value1 == 0) {
-        console.log('число = 0')
-    }
-    else {
-        console.log('число < 0')
-    }
-  */   
+        arr1[0] = 17;
+        console.log(arr1[2]);
 
-    /* && - и || - или ! - нет */
-    let val2 = 17;
-    if ((val2 >= 5 && val2 <= 10) || (val2 >= 15 && val2 <= 20 )) {
-        console.log('число находится в заданных диапазонах')
-    }
+        /* длинна массива */
+        console.log(arr1.length);
 
-    let val3;
-    if (!val3) {
-        console.log('число не корректно')
-    }
+        arr1.length = 2;
+        console.log(arr1);
 
-    /* приведение к false */
-    /* 0 NaN undefined null '' */
+        arr1[100] = 'uiygtiuyh';
+        console.log(arr1.length);
+        console.log(arr1);
 
-    /* switch */
-
-    /* 
-    let numderDay = parseInt(prompt('введите номер дня недели:'));
-
-    switch (numderDay) {
-        case 1:
-            console.log('понедельник');
-            break;
-        case 2:
-            console.log('вторник');
-            break;
-        case 3:
-            console.log('среда');
-            break;
-        case 4:
-            console.log('четверг');
-            break;
-        case 5:
-            console.log('пятница');
-            break;
-        case 6:
-            console.log('суббота');
-            break;
-        case 7:
-            console.log('воскресенье');
-            break;
-        default:
-            console.log('не корректное значение')
-    }
-    */
-
-    let test = 3;
-    if (test % 2 == 0) {
-        console.log('четное');
-    }
-    else {
-        console.log('не четное');
-    }
-
-    /* ? - тернарный оператор */
-    let result = (test % 2 == 0) ? 'четное' : 'нечетное';
-    console.log(result);
-
-
-
-    /* ====================================================== */
-    /* ЦИКЛЫ */
-    /* for - классика */
-    for (let i =1; i <= 10; i++) {
-        console.log(i);
-    }
-    for (let i = 0, j = 10; i != j; i++, j--) {
-        console.log(i, j);
-    }
-
-
-    label1: for (let i = 1; i <= 20; i++) {
-        for (let j = 1; j <= 10; j++) {
-            console.log(i, j);
-            break label1;
-            continue label1; /* метки ставятся только на циклы */
+        let arr3 = [];
+        /* for (let i = 0; i <= 2; i++) {
+        arr3[i] = +prompt('введите любое число');
         }
-    }
+        console.log(arr3); */
 
-
-    /* цикл с предусловием */
-    let count = 0;
-    while(count < 10) {
-        console.log(count++);
-        if (count == 5) {
-            break;
+        /* методы наполнения массива */
+        arr3.length = 0;
+        //push() - дописывает значение к конец массива
+        //pop() - удаляет последний значимый элемент
+        /* for (let i = 1; i <= 3; i++) {
+            arr3.push(+prompt('введите любое число'));
         }
-    }
+        arr3.pop();
+        console.log(arr3); */
 
-    /* цикл с постусловием */
-    let count2 = 0;
-    do {
-        console.log(count);
-        count++;
-    } while (count <= 10);
+        /* shift() и unshift() - удаляет и добавляет элементы с начала массива */
 
+        let arr4 = [1, 2, 3, 4, 5];
+        /* 1-й способ перебора элементов в массивe: */
+        let result = 1;
+        for (let i = 0; i < arr4.length; i++) {
+            result *= arr4[i];
+        }
+        console.log(result);
 
+        result = 1;
+        for(let i of arr4) {
+            result *= i;
+        }
+        console.log(result);
+                        /* ! */
+        let arr5 = [[1, 2, 3], [1, 2, 3], [1, 2, 3]];
+        arr5[1].splice(1, 1);
+        console.log(arr5[0][2]);
 
+        let arr6 = arr5;
+
+        /* основные методы массивов: */
+        let arr7 = [1, 2, 3, 4, 5];
+        /* arr.splice() - универсальный метод для модификации массива */
+        /* удаление */
+        arr7.splice(3, 1); //начиная с какого, сколько / на месте изменяет длинну массива:
+        console.log(arr7);
+
+        arr7.splice(0, 1, 100, 101); //замена / начиная с какого, сколько, какие поставить
+        console.log(arr7);
+
+        arr7.splice(2, 0, 102, 103); //дополнение
+        console.log(arr7);
+
+        /* slice() - вырезает часть массива: */
+        let arr8 = [1, 2, 3, 4, 5];
+        let arr9 = arr8.slice(0, 3); // с какого по какой(не включая)
+        arr8[0] = 100;
+        console.log(arr8);
+        console.log(arr9);
+
+        /* indexOf() - поиск элемента в массиве: */
+        let arr10 = [1, 2, 3];
+        console.log(arr10.indexOf(3)); // ищет значение, выводит индекс (выводит первый слева) если нет такого, вернёт -1
+
+        /* reverse() - переворачивет массив */
+        let arr11 = [1, 2, 4];
+        arr11.reverse();
+        console.log(arr11);
+
+        /* split() - строка в массив! */
+        let userStr = '1,2,3,4,5,6';
+        let arr12 = userStr.split(',');
+        console.log(arr12);
+
+        /* join() - объединение массива назад в строку: */
+        let arr13 = [1, 2, 3];
+        let userStr2 = arr13.join('');
+        console.log(userStr2);
+        console.log(typeof userStr2);
 
 
     </script>
